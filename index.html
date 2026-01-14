@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Srushti Fitness & Wellness</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  Srushti Fitness & Wellness Institute
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
+    <h1>Build a</h1>
+    <h2>Healthy & Active Lifestyle</h2>
+    <p class="formula">20% Exercise • 80% Nutrition • 100% Fitness</p>
+    <a href="#contact" class="btn">Get Started</a>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section class="section">
+  <div class="about-card">
+    <h2>About Us</h2>
+    <p>
+      <strong>Srushti Fitness & Wellness</strong> is a trusted wellness institute focused on
+      complete physical and mental well-being through nutrition, fitness, and lifestyle guidance.
+    </p>
+    <p>
+      We believe that <strong>nutrition is the foundation of health</strong>, supported by
+      smart exercise and positive daily habits.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section bg-light" id="services">
+  <h2>Our Wellness Programs</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Nutrition & Diet</h3>
+      <p>Healthy breakfast plans, digestive care, and energy-boosting nutrition.</p>
+    </div>
+
+    <div class="card">
+      <h3>Weight Management</h3>
+      <p>Healthy weight loss and weight gain programs with lifestyle balance.</p>
+    </div>
+
+    <div class="card">
+      <h3>Heart & Bone Health</h3>
+      <p>Support for heart wellness, joint care, and strong bones.</p>
+    </div>
+
+    <div class="card">
+      <h3>Children’s Health</h3>
+      <p>Nutrition, growth, and immunity support for children.</p>
+    </div>
+
+    <div class="card">
+      <h3>Anti-Aging Care</h3>
+      <p>Stay active and youthful with proper nutrition and habits.</p>
+    </div>
+
+    <div class="card">
+      <h3>Energy & Immunity</h3>
+      <p>Daily energy improvement and immunity strengthening plans.</p>
+    </div>
+  </div>
+</section>
+
+<!-- NUTRITION VS WORKOUT -->
+<section class="section">
+  <h2>Nutrition vs Workout</h2>
+  <p class="highlight">80% Nutrition • 20% Workout</p>
+
+  <div class="comparison">
+    <div class="box red">
+      <h3>Unhealthy Lifestyle</h3>
+      <ul>
+        <li>Sugar-loaded meals</li>
+        <li>High carbs, low protein</li>
+        <li>Low energy & quick hunger</li>
+        <li>Poor digestion</li>
+      </ul>
+    </div>
+
+    <div class="box green">
+      <h3>Healthy Lifestyle</h3>
+      <ul>
+        <li>Protein-rich nutrition</li>
+        <li>Balanced meals</li>
+        <li>Long-lasting energy</li>
+        <li>Better digestion & focus</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="section bg-light">
+  <h2>Why Choose a Healthy Lifestyle?</h2>
+  <ul class="benefits">
+    <li>✔ Strong immunity & disease prevention</li>
+    <li>✔ Improved mental peace & positivity</li>
+    <li>✔ Better digestion and sleep</li>
+    <li>✔ Increased daily energy levels</li>
+    <li>✔ Healthy heart, muscles & joints</li>
+    <li>✔ Effective weight & fat control</li>
+  </ul>
+</section>
+
+<!-- MOTIVATION -->
+<section class="section bg-dark">
+  <p class="quote">“The greatest wealth is Health.”</p>
+  <p class="motivation">Eat right • Train smart • Live better</p>
+</section>
+
+<!-- CONTACT -->
+<section class="section bg-light" id="contact">
+  <h2>Get in Touch</h2>
+  <p class="center">Fill the form below and we will contact you soon.</p>
+
+  <form
+    class="contact-form"
+    action="https://docs.google.com/forms/d/e/1FAIpQLSfVFYNeYq6MIkzxnn9VOSUJuBZSaQfoueaYqczkLonG0_4jEw/formResponse"
+    method="POST"
+    target="hidden_iframe"
+  >
+    <div class="form-group">
+      <input type="text" name="entry.1717038712" placeholder="Full Name" required>
+    </div>
+
+    <div class="form-group">
+      <input type="text" name="entry.1796129450" placeholder="Mobile Number" required>
+    </div>
+
+    <div class="form-group">
+      <input type="email" name="entry.1563392310" placeholder="Email Address">
+    </div>
+
+    <div class="form-group">
+      <select name="entry.2004052961" required>
+        <option value="">Select Service</option>
+        <option value="Weight Management">Weight Management</option>
+        <option value="Healthy Nutrition">Healthy Nutrition</option>
+        <option value="Fitness Training">Fitness Training</option>
+        <option value="General Consultation">General Consultation</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <textarea name="entry.1457955062" placeholder="Your Message" rows="4"></textarea>
+    </div>
+
+    <button type="submit" class="btn">Submit</button>
+  </form>
+
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
+  <p id="thankyou">✅ Thank you! We will contact you soon.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <h3>Srushti Fitness & Wellness</h3>
+  <p>आरोग्यासाठी विश्वासाचं ठिकाण</p>
+  <p>© 2026 All Rights Reserved</p>
+</footer>
+
+<script>
+  const form = document.querySelector(".contact-form");
+  const thankyou = document.getElementById("thankyou");
+
+  if (form) {
+    form.addEventListener("submit", () => {
+      setTimeout(() => {
+        thankyou.style.display = "block";
+        form.reset();
+      }, 1000);
+    });
+  }
+</script>
+
+</body>
+</html>
+
