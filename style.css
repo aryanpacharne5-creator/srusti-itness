@@ -22,13 +22,21 @@ body{
 
 /* HERO */
 .hero{
-  min-height:100vh;
+  min-height:100svh; /* modern safe viewport */
   background:linear-gradient(135deg,#00c853,#2e7d32);
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
+  padding:20px;
 }
+
+@supports not (height: 100svh) {
+  .hero {
+    min-height: 100vh;
+  }
+}
+
 
 .hero-content{
   color:#fff;
@@ -334,4 +342,15 @@ textarea{
 .card:active,
 .btn:active{
   transform:scale(0.97);
+}
+
+/* ===== FINAL MOBILE VISIBILITY SAFETY ===== */
+@media (max-width: 768px) {
+  body,
+  section,
+  header,
+  footer {
+    overflow: visible !important;
+    height: auto !important;
+  }
 }
