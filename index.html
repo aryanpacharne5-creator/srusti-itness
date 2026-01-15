@@ -6,6 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
+
+<script>
+/* ===== SMOOTH SCROLL ===== */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e){
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href"))
+      .scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+/* ===== TAP FEEDBACK FOR BUTTONS ===== */
+document.querySelectorAll(".btn").forEach(btn => {
+  btn.addEventListener("touchstart", () => {
+    btn.style.transform = "scale(0.97)";
+  });
+  btn.addEventListener("touchend", () => {
+    btn.style.transform = "scale(1)";
+  });
+});
+
+/* ===== SCROLL ANIMATION (MOBILE SAFE) ===== */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+},{ threshold: 0.15 });
+
+document.querySelectorAll(".section, .card, .ba-slider").forEach(el => {
+  observer.observe(el);
+});
+</script>
+
+
 <body>
 
 <!-- TOP BAR -->

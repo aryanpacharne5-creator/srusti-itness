@@ -301,3 +301,47 @@ footer h3{color:#00c853;}
     height:240px;
   }
 }
+
+/* ===== MOBILE INTERACTION EFFECTS ===== */
+.section,
+.card,
+.ba-slider{
+  opacity:0;
+  transform:translateY(30px);
+  transition:all .6s ease;
+}
+
+.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Better mobile tap areas */
+button,
+.btn,
+input,
+select,
+textarea{
+  min-height:48px;
+}
+
+/* Mobile typography scaling */
+@media(max-width:480px){
+  body{
+    font-size:15px;
+  }
+
+  .hero h2{
+    font-size:2.1rem;
+  }
+
+  .section{
+    padding:60px 16px;
+  }
+}
+
+/* Touch feedback */
+.card:active,
+.btn:active{
+  transform:scale(0.97);
+}
