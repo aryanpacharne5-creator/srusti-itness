@@ -223,39 +223,73 @@ footer{
 footer h3{color:#00c853;}
 
 
-/* ===== PHOTO GALLERY ===== */
-#gallery{
-  background:#ffffff;
-}
-
-#gallery h2{
-  text-align:center;
-  color:#2e7d32;
-}
-
-#gallery .center{
-  margin-bottom:35px;
-}
-
-.gallery-grid{
+/* ===== BEFORE & AFTER GALLERY ===== */
+.before-after-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:30px;
+  margin-top:40px;
 }
 
-.gallery-item{
+.ba-card{
+  background:#ffffff;
+  padding:20px;
+  border-radius:22px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.12);
+  text-align:center;
+}
+
+.ba-images{
+  display:flex;
+  gap:12px;
+}
+
+.ba-box{
+  position:relative;
+  width:50%;
   overflow:hidden;
-  border-radius:18px;
-  box-shadow:0 12px 25px rgba(0,0,0,0.12);
+  border-radius:16px;
 }
 
-.gallery-item img{
+.ba-box img{
   width:100%;
-  height:100%;
+  height:220px;
   object-fit:cover;
   transition:transform 0.4s ease;
 }
 
-.gallery-item:hover img{
-  transform:scale(1.08);
+.ba-box span{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:rgba(0,0,0,0.6);
+  color:#ffffff;
+  padding:4px 10px;
+  font-size:0.85rem;
+  border-radius:20px;
+}
+
+.ba-box:hover img{
+  transform:scale(1.1);
+}
+
+.ba-caption{
+  margin-top:15px;
+  font-weight:600;
+  color:#2e7d32;
+}
+
+/* Mobile Fix */
+@media(max-width:480px){
+  .ba-images{
+    flex-direction:column;
+  }
+
+  .ba-box{
+    width:100%;
+  }
+
+  .ba-box img{
+    height:200px;
+  }
 }
