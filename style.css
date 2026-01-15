@@ -303,9 +303,9 @@ footer h3{color:#00c853;}
 }
 
 /* ===== MOBILE INTERACTION EFFECTS ===== */
-.section,
-.card,
-.ba-slider{
+.js-animate .section,
+.js-animate .card,
+.js-animate .ba-slider{
   opacity:0;
   transform:translateY(30px);
   transition:all .6s ease;
@@ -315,6 +315,7 @@ footer h3{color:#00c853;}
   opacity:1;
   transform:translateY(0);
 }
+
 
 /* Better mobile tap areas */
 button,
