@@ -28,17 +28,7 @@ document.querySelectorAll(".btn").forEach(btn => {
 });
 
 /* ===== SCROLL ANIMATION (MOBILE SAFE) ===== */
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
-  });
-},{ threshold: 0.15 });
 
-document.querySelectorAll(".section, .card, .ba-slider").forEach(el => {
-  observer.observe(el);
-});
 </script>
 
 
