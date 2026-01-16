@@ -34,6 +34,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+<script>
+document.querySelectorAll(".ba-modern-card").forEach(card => {
+  const img = card.querySelector(".ba-image");
+  const tabs = card.querySelectorAll(".ba-tab");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      const type = tab.dataset.type;
+      img.src = img.dataset[type];
+    });
+  });
+});
+</script>
+
+
 
 
 <body class="js-animate">
@@ -157,42 +175,49 @@ document.addEventListener("DOMContentLoaded", () => {
 <!-- BEFORE & AFTER INTERACTIVE GALLERY -->
 <section class="section bg-light" id="transformations">
   <h2>Before & After Transformations</h2>
-  <p class="center">Swipe to see real fitness & wellness results</p>
+  <p class="center">Real results through nutrition & lifestyle changes</p>
 
-  <div class="ba-slider-grid">
+  <div class="ba-modern-grid">
 
     <!-- CARD 1 -->
-    <div class="ba-slider">
-      <div class="ba-img-wrapper">
-        <img src="./images/after wt.jpg" class="ba-img after">
-        <img src="./images/before wt.jpg" class="ba-img before">
+    <div class="ba-modern-card">
+      <div class="ba-tabs">
+        <button class="ba-tab active" data-type="before">Before</button>
+        <button class="ba-tab" data-type="after">After</button>
       </div>
-      <input type="range" min="0" max="100" value="50" class="ba-range">
+
+      <img 
+        src="./images/before-wt.jpg"
+        data-before="./images/before-wt.jpg"
+        data-after="./images/after-wt.jpg"
+        class="ba-image"
+        alt="Weight Loss Transformation"
+      >
+
       <p class="ba-caption">Weight Loss Transformation</p>
     </div>
 
     <!-- CARD 2 -->
-    <div class="ba-slider">
-      <div class="ba-img-wrapper">
-        <img src="./images/after hlc.jpg" class="ba-img after">
-        <img src="./images/before hlc.jpg" class="ba-img before">
+    <div class="ba-modern-card">
+      <div class="ba-tabs">
+        <button class="ba-tab active" data-type="before">Before</button>
+        <button class="ba-tab" data-type="after">After</button>
       </div>
-      <input type="range" min="0" max="100" value="50" class="ba-range">
-      <p class="ba-caption">Healthy Lifestyle Change</p>
-    </div>
 
-    <!-- CARD 3 -->
-    <div class="ba-slider">
-      <div class="ba-img-wrapper">
-        <img src="./images/after btr.jpg" class="ba-img after">
-        <img src="./images/before btr.jpg" class="ba-img before">
-      </div>
-      <input type="range" min="0" max="100" value="50" class="ba-range">
-      <p class="ba-caption">Body Toning Result</p>
+      <img 
+        src="./images/before-hlc.jpg"
+        data-before="./images/before-hlc.jpg"
+        data-after="./images/after-hlc.jpg"
+        class="ba-image"
+        alt="Healthy Lifestyle Change"
+      >
+
+      <p class="ba-caption">Healthy Lifestyle Change</p>
     </div>
 
   </div>
 </section>
+
 
 
 
