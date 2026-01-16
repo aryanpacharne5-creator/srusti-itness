@@ -35,21 +35,26 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <script>
-document.querySelectorAll(".ba-modern-card").forEach(card => {
-  const img = card.querySelector(".ba-image");
-  const tabs = card.querySelectorAll(".ba-tab");
+document.addEventListener("DOMContentLoaded", () => {
 
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      tabs.forEach(t => t.classList.remove("active"));
-      tab.classList.add("active");
+  document.querySelectorAll(".ba-modern-card").forEach(card => {
+    const img = card.querySelector(".ba-image");
+    const tabs = card.querySelectorAll(".ba-tab");
 
-      const type = tab.dataset.type;
-      img.src = img.dataset[type];
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        const type = tab.dataset.type;
+        img.src = img.dataset[type];
+      });
     });
   });
+
 });
 </script>
+
 
 
 
@@ -68,12 +73,12 @@ document.querySelectorAll(".ba-modern-card").forEach(card => {
     <h1>Build a</h1>
     <h2>Healthy & Active Lifestyle</h2>
     <p class="formula">20% Exercise • 80% Nutrition • 100% Fitness</p>
-    <a href="#contact" class="btn">Get Started</a>
+    <a href="#about" class="btn">Get Started</a>
   </div>
 </header>
 
 <!-- ABOUT -->
-<section class="section">
+<section class="section" id="about">
   <div class="about-card">
     <h2>About Us</h2>
     <p>
@@ -264,6 +269,29 @@ document.querySelectorAll(".ba-modern-card").forEach(card => {
   <iframe name="hidden_iframe" style="display:none;"></iframe>
   <p id="thankyou">✅ Thank you! We will contact you soon.</p>
 </section>
+
+
+<!-- WhatsApp Floating Button -->
+<a
+  href="whatsapp://send?phone=917888024282&text=Hello%20I%20want%20fitness%20consultation"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+
+<!-- MAP -->
+<div class="map-container">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236.38900845378365!2d73.8939453803566!3d18.563931240723715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c10370118941%3A0xe65a46dd82559f49!2sShree%20Mini%20Market!5e0!3m2!1sen!2sin!4v1768599807597!5m2!1sen!2sin"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
 
 <!-- FOOTER -->
 <footer>
