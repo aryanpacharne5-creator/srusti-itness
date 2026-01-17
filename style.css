@@ -432,3 +432,20 @@ textarea{
   }
 }
 
+/* Mobile number validation */
+.error-msg{
+  display:none;
+  color:#d32f2f;
+  font-size:0.85rem;
+  margin-top:6px;
+}
+
+
+/* Input error highlight */
+.contact-form input:invalid {
+  border-color:#d32f2f;
+}
+
+.contact-form input:valid {
+  border-color:#2e7d32;
+}

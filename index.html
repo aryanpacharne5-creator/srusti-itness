@@ -56,6 +56,36 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".contact-form");
+  const mobileInput = form.querySelector('input[name="entry.1796129450"]');
+  const mobileError = document.getElementById("mobileError");
+  const mobilePattern = /^[0-9]{10}$/;
+
+  // Show message while typing
+  mobileInput.addEventListener("input", () => {
+    if (mobileInput.value === "") {
+      mobileError.style.display = "none";
+    } else if (!mobilePattern.test(mobileInput.value)) {
+      mobileError.style.display = "block";
+    } else {
+      mobileError.style.display = "none";
+    }
+  });
+
+  // On submit
+  form.addEventListener("submit", function(e) {
+    if (!mobilePattern.test(mobileInput.value.trim())) {
+      e.preventDefault();
+      mobileError.style.display = "block";
+      mobileInput.focus();
+    }
+  });
+});
+</script>
+
+
 
 
 
@@ -261,7 +291,19 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
     <div class="form-group">
-      <input type="text" name="entry.1796129450" placeholder="Mobile Number" required>
+     <input
+        type="tel"
+        name="entry.1796129450"
+        placeholder="Phone Number"
+        pattern="[0-9]{10}"
+        required
+      >
+
+      <small class="error-msg" id="mobileError">
+        Please enter a valid mobile number (10 digits only)
+      </small>
+
+
     </div>
 
     <div class="form-group">
